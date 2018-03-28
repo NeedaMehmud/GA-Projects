@@ -1,18 +1,27 @@
-var contacts = ["Matt Smith", "Sam Davis", "Ashley Jones"];
-var findContact = function(){
-  console.log(contacts[2]);
+var contacts = [ 
+  {
+  'firstName' : 'John',
+  'lastName' : 'Doe',
+  'phone' : '(512) 355-0453',
+  'email' : 'johndoe@email.com'
+  },
+  {
+  'firstName' : 'Jane',
+  'lastName' : 'Doe',
+  'phone' : '(312) 641-2203',
+  'email' : 'janedoe@email.com'
+  },
+  {
+  'firstName' : 'Suzie',
+  'lastName' : 'Smith',
+  'phone' : '(415) 604-4219',
+  'email' : 'suziesmith@email.com'
+  }
+];
+
+var listContacts = function() {
+  for (var i = 0; i < contacts.length; i++) {
+    console.log(contacts[i].firstName + ' ' + contacts[i].lastName);
+  }
 };
-
-var updateLastContact = function(){
-  contacts[contacts.length -1] = "Patty Davis";
-};
-
-var addContact = function(){
-  contacts.push("Bill Jones");
-};
-
-findContact();
-updateLastContact();
-addContact();
-
-console.log(contacts);
+listContacts();
